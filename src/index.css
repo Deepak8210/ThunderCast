@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import "tailwindcss";
+
+body {
+  @apply bg-gradient-to-b from-[#00114a] to-[#0B0C10];
+  @apply bg-no-repeat bg-cover;
+  @apply bg-center;
+  @apply bg-fixed;
+  font-family: poppins;
+  @apply text-white;
+}
+.flash-yellow {
+  @apply text-[#FFAD51];
+}
