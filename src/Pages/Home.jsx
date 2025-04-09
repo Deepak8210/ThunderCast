@@ -310,13 +310,38 @@ const Home = () => {
             this section.
           </p>
         </div>
-        <div className="mt-4 grid lg:grid-cols-4 gap-3">
-          <div className="h-20 rounded-2xl border border-white  md:col-span-2"></div>
-          <div className="h-20 rounded-2xl border border-white"></div>
-          <div className="h-20 rounded-2xl border border-white"></div>
-          <div className="h-20 rounded-2xl border border-white"></div>
-          <div className="h-20 rounded-2xl border border-white"></div>
-          <div className="h-20 rounded-2xl border border-white md:col-span-2"></div>
+        <div className="mt-4 grid lg:grid-cols-4 gap-4">
+          <div className="h-20 rounded-2xl min-h-[12.5rem] md:min-h-[25rem] lg:min-h-[18rem] border border-white  md:col-span-2"></div>
+          <div className="h-20 rounded-2xl min-h-[25rem] lg:min-h-[18rem] border border-white"></div>
+          <div className="h-20 rounded-2xl min-h-[25rem] lg:min-h-[18rem] border border-white"></div>
+          <div className="h-20 rounded-2xl min-h-[25rem] lg:min-h-[18rem] border border-white"></div>
+          <div className="h-20 rounded-2xl min-h-[25rem] lg:min-h-[18rem] border border-white"></div>
+          <div className="h-20 rounded-2xl min-h-[12.5rem] md:min-h-[25rem] lg:min-h-[18rem] border border-white md:col-span-2"></div>
+        </div>
+      </section>
+      {/* Global Weather Outlook*/}
+      <section className="p-4 lg:mt-10 lg:px-[8%] md:px-[5%]">
+        <div className="text-center space-y-2">
+          <h2 className="text-[1.4rem] md:text-[1.8rem] font-medium py-3">
+            Global Weather Outlook
+          </h2>
+          <p className="text-sm md:text-[1rem] max-w-2xl mx-auto">
+            Global Weather Outlook provides a forecast for various regions
+            worldwide. Stay informed about weather conditions in different parts
+            of the world.
+          </p>
+        </div>
+        <div className="mt-4 grid lg:grid-cols-6 gap-4">
+          {Array(12)
+            .keys()
+            .map((e, i) => (
+              <div className="border border-gray-200 rounded-2xl flex flex-col items-center">
+                <div className="w-full h-20">
+                  <img src="#" alt="" />
+                </div>
+                <span>India</span>
+              </div>
+            ))}
         </div>
       </section>
     </div>
