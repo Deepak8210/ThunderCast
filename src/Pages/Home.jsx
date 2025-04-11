@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Minus, Search, Sun } from "lucide-react";
+import { Minus, Play, Search, Sun } from "lucide-react";
 import WeatherCard from "../components/WeatherCard";
 import UpdateCard from "../components/UpdateCard";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -331,17 +331,95 @@ const Home = () => {
             of the world.
           </p>
         </div>
-        <div className="mt-4 grid lg:grid-cols-6 gap-4">
+        <div className="mt-4 grid xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 gap-4">
           {Array(12)
             .keys()
             .map((e, i) => (
-              <div className="border border-gray-200 rounded-2xl flex flex-col items-center">
-                <div className="w-full h-20">
-                  <img src="#" alt="" />
+              <div className="border border-gray-200 rounded-2xl flex flex-col items-center p-6">
+                <div className="w-full h-20 flex justify-center">
+                  <img
+                    src="/flags/India.png"
+                    alt="flag"
+                    className="object-contain w-20"
+                  />
                 </div>
-                <span>India</span>
+                <span className="text-[1.75rem]">India</span>
               </div>
             ))}
+        </div>
+      </section>
+      {/* Weather Forecast Videos*/}
+      <section className="p-4 lg:mt-10 lg:px-[8%] md:px-[5%]">
+        <div className="text-center space-y-2">
+          <h2 className="text-[1.4rem] md:text-[1.8rem] font-medium py-3">
+            Weather Forecast Videos
+          </h2>
+          <p className="text-sm md:text-[1rem] max-w-2xl mx-auto">
+            Watch the latest weather forecasts in video format. Stay up-to-date
+            with accurate and informative videos on the weather conditions and
+            trends from around the world.
+          </p>
+        </div>
+        <div className="mt-4 grid lg:grid-cols-3 md:grid-cols-2 gap-4">
+          {[...Array(3).keys()].map((_, i) => (
+            <div
+              key={i}
+              className={`${
+                i === 2
+                  ? "md:col-span-full lg:col-span-1 lg:w-full justify-self-center w-full md:w-1/2"
+                  : ""
+              }`}
+            >
+              <div
+                style={{
+                  backgroundImage: "url('/back.jpg')",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                }}
+                className="border border-gray-200 rounded-2xl flex flex-col items-center justify-center overflow-hidden h-56 relative"
+              >
+                <div className="w-20 h-20 rounded-full flex items-center justify-center bg-[rgba(0,0,0,0.4)] border border-[rgba(255,255,255,0.3)]">
+                  <Play fill="#FFF" />
+                </div>
+              </div>
+              <p className="font-medium text-[1rem] my-2 md:text-[1.45rem]">
+                The Science Behind Extreme Weather Events
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+      {/* Latest Weather Forecast News*/}
+      <section className="p-4 lg:mt-10 lg:px-[8%] md:px-[5%]">
+        <div className="text-center space-y-2">
+          <h2 className="text-[1.4rem] md:text-[1.8rem] font-medium py-3">
+            Latest Weather Forecast News
+          </h2>
+          <p className="text-sm md:text-[1rem] max-w-2xl mx-auto">
+            Stay up-to-date with the latest weather forecast news and plan your
+            day accordingly with our comprehensive coverage
+          </p>
+        </div>
+        <div className="mt-4 grid lg:grid-cols-3 md:grid-cols-2 gap-4">
+          {[...Array(5).keys()].map((_, i) => (
+            <div
+              key={i}
+              className={`
+        ${i === 1 ? "md:row-span-2 md:h-full" : "h-56"}
+        border border-gray-200 rounded-2xl 
+        overflow-hidden relative  group
+      `}
+              style={{
+                backgroundImage: "url('/back.jpg')",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            >
+              <div className="h-[50%] bg-gradient-to-br from-[rgba(255,255,255,0.5)] to-[rgba(0,0,0,0.1)] group-hover:translate-y-0 bg-[rgba(0,0,0,0.5)] absolute bottom-0 left-0 w-full rounded-bl-2xl transform transition duration-300 translate-y-[100%] hover:translate-y-0"></div>
+            </div>
+          ))}
         </div>
       </section>
     </div>
